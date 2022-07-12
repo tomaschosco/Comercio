@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% block title %}
+    Productos
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="../static/css/productos.css">
+{% endblock %}
+
+{% block main_frame %}
+<div class="conteinerProductos" id="conteiner">
+    {% if productos %}
+        {% for producto in productos %}
+            <div class="conteinerProducto">
+                <div class="conteinerProd_items contCheckbox ">
+                    <input type="checkbox">
+                </div>
+                <div class="conteinerProd_items contImg">
+                    <img src="../static/uploads/{{producto.imagen}}" alt="" class="imgProduct">
+                </div>
+                <div class="conteinerProd_items contInfo">
+                    <div>
+                        <h2>{{producto.nombre}}</h2>
+                    </div>
+                    <div>
+                        <h4>$ {{producto.precio}}</h4>
+                    </div>
+                    <div>
+                        <h4>Stock:</h4>
+                    </div>
+                </div>
+                <div class="conteinerProd_items contStock">
+                    <div class="tableStock">
+                        <div> <h2>Stock</h2> </div>
+                        <div class="tablaConteinerItems">
+                            {% for talle in producto.talles %}
+                                <div class="itemsTalle">
+                                    <h4 class="center">{{talle.talle}}</h4>
+                                    <h4 class="center">{{talle.cantidad}}</h4>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="conteinerProd_items contMenu">
+                    <div>
+                        <button class="btnPoints" type="button" id="btnDrop"><i class="fa-solid fa-ellipsis-vertical puntos" id="emote"></i></button>
+                    </div>
+                    <div class="listDropdown" id="listDrop">
+                        <div class="relativo">
+                            <div class="absolute">
+                                <ul>
+                                    <li class="listDrop">
+                                        <a href="{{url_for('producto_editar', id=producto.idProducto)}}">Modificar</a>
+                                    </li>
+                                    <li class="listDrop">
+                                        <a href="{{url_for('producto_eliminar', id=producto.idProducto)}}">Borrar</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h2>No hay Productos</h2>
+    {% endif %}
+</div>
+<script src="../static/javascript/dropdown.js"></script>
+
+{% endblock %}
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/productos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0bcc4d697f.js" crossorigin="anonymous"></script>
+    <title>Productos</title>
+</head>
+<body>
+    <div class="borrar">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla a ex maiores sed quae tempore exercitationem non dolor at odit, sequi molestias amet architecto nihil, ipsa recusandae reiciendis culpa voluptate.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla a ex maiores sed quae tempore exercitationem non dolor at odit, sequi molestias amet architecto nihil, ipsa recusandae reiciendis culpa voluptate.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla a ex maiores sed quae tempore exercitationem non dolor at odit, sequi molestias amet architecto nihil, ipsa recusandae reiciendis culpa voluptate.</p>
+    </div>
+    <div class="conteinerProductos" id="conteiner">
+        {% if productos %}
+            {% for producto in productos %}
+                <div class="conteinerProducto">
+                    <div class="conteinerProd_items contCheckbox ">
+                        <input type="checkbox">
+                    </div>
+                    <div class="conteinerProd_items contImg">
+                        <img src="../static/uploads/{{producto.imagen}}" alt="" class="imgProduct">
+                    </div>
+                    <div class="conteinerProd_items contInfo">
+                        <div>
+                            <h2>{{producto.nombre}}</h2>
+                        </div>
+                        <div>
+                            <h4>$ {{producto.precio}}</h4>
+                        </div>
+                        <div>
+                            <h4>Stock:</h4>
+                        </div>
+                    </div>
+                    <div class="conteinerProd_items contStock">
+                        <div class="tableStock">
+                            <div> <h2>Stock</h2> </div>
+                            <div class="tablaConteinerItems">
+                                {% for talle in producto.talles %}
+                                    <div class="itemsTalle">
+                                        <h4 class="center">{{talle.talle}}</h4>
+                                        <h4 class="center">{{talle.cantidad}}</h4>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="conteinerProd_items contMenu">
+                        <div>
+                            <button class="btnPoints" type="button" id="btnDrop"><i class="fa-solid fa-ellipsis-vertical puntos" id="emote"></i></button>
+                        </div>
+                        <div class="listDropdown" id="listDrop">
+                            <div class="relativo">
+                                <div class="absolute">
+                                    <ul>
+                                        <li class="listDrop">
+                                            <a href="{{url_for('producto_editar', id=producto.idProducto)}}">Modificar</a>
+                                        </li>
+                                        <li class="listDrop">
+                                            <a href="{{url_for('producto_eliminar', id=producto.idProducto)}}">Borrar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h2>No hay Productos</h2>
+        {% endif %}
+    </div>
+    <script src="../static/javascript/dropdown.js"></script>
+</body>
+</html>
+-->

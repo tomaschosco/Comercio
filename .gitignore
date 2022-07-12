@@ -1,0 +1,4 @@
+__pycache__
+.vscode
+venv
+mysqlclient-1.4.6-cp36-cp36m-win_amd64.whl

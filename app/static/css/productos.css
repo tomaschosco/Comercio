@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+.borrar{
+    height: 250px;
+}
+body{
+    background-color: #EEEEEE;
+}
+.conteinerProductos{
+    width: 100%;
+    padding: 45px;
+}
+.conteinerProducto{
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 250px;
+    margin-top: 15px;
+}
+.imgProduct{
+    object-fit: cover;
+    height: 95px;
+    width: 95px;
+}
+.contCheckbox{
+    width: 5%;
+    align-self: center;
+}
+.contImg{
+    width: 15%;
+    padding: 30px 20px;
+}
+.contInfo{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 30px 20px;
+}
+.contStock{
+    width: 50%;
+    padding: 20px 20px;
+}
+.contMenu{
+    width: 5%;
+    align-self: center;
+    text-align: end;
+}
+.tablaConteinerItems{
+    display: flex;
+    gap: 10px;
+}
+.center{
+    text-align: center;
+}
+.tableStock{
+    background-color: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    height: 80%;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.btnPoints{
+    border: none;
+}
+.listDropdown{
+    display: none;
+}
+.puntos{
+    font-size: 22px;
+}
+.relativo{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    height: auto;
+    background-color: #FFFFFF;
+    width: 150px;
+    right: 0;
+    text-align:left;
+    -webkit-box-shadow: 0px 0px 1px 0px #000000; 
+    box-shadow: 0px 0px 1px 0px #000000;
+    border: 0px hidden #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+}
+.listDrop{
+    padding: 15px 20px;
+}
+.listDrop:hover{
+    background-color: #EEEEEE;
+}

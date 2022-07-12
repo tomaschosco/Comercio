@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+body{
+    background-color: #EEEEEE;
+}
+.item{
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    height: 250px;
+    width: 55%;
+    
+}
+.itemFoto{
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    height: 500px;
+    width: 55%;
+    
+}
+.spanOpcional{
+    color: #CCCCCC;
+    display:inline;
+    padding-left: 10px;
+
+}
+.h2span{
+    display: inline;
+}
+.item >div{
+    height: 50%;
+}
+.titulo{
+    padding: 35px 35px 5px 35px;
+    text-align: left;
+}
+.seccion{
+    padding: 5px 35px 35px 35px;
+}
+.inputborde{
+    border-bottom: 1px solid #c7c7c7;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+.input{
+    padding: 12px 20px;
+    height: 40px;
+    width: 100%;
+    outline: 0px;
+    font-size: 23px;
+}
+.inputTalle{
+    padding: 12px 20px;
+    height: 40px;
+    width: 15%;
+    outline: 0px;
+    font-size: 23px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-style: solid;
+}
+.prueba{
+    height: 350px;
+}
+.tituloPrincipal{
+    text-align: center;
+    margin:30px 0;
+}
+.sticky{
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #EEEEEE;
+    height: 50px;
+    padding: 10px;
+}
+.contenedorItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inputPrecio{
+    padding: 12px 20px;
+    width: 10%;
+}
+
+.btnTalle{
+    background-color: transparent;
+    border-width: 1px;
+    border-radius: 54px;
+    border-style: dashed;
+    width: 116px;
+    height: 43px;
+    padding: 10px;
+    font-size: 15px;
+    border-color: rgb(69, 168, 214);  
+    color: rgb(69, 168, 214);    
+}
+.selectCamera{
+    background-color: transparent;
+    border-width: 1px;
+    border-radius: 10px;
+    border-style: dashed;
+    width: 80%;
+    border-color: rgb(69, 168, 214);  
+    color: rgb(69, 168, 214);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    
+}
+#fileConteiner{
+    height: 250px;
+    padding: 35px;
+    
+}
+a{
+    text-decoration: none;
+    font-size: 19px;
+}
+.seccionFoto{
+    padding: 35px 35px 5px 35px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imgFoto{
+    height: 220px;
+}
+.table{
+    padding: 35px;
+}
+td{
+    text-align: center;
+}
+.conteinerTd{
+    display: flex;
+    justify-content: center;
+}
+.tdInput{
+    width: 30%;
+    outline: 0;
+}
+.seccionTalles{
+    height: 85%;
+    padding: 5px 40px;
+    display: flex;
+    flex-direction: column;
+}
+.tituloTalles{
+    padding: 20px 40px;
+    text-align: left;
+    height: 15%;
+}
+.itemTalles{
+    background-color: #FFFFFF;
+    margin-top: 15px;
+    height: 450px;
+    width: 55%;
+    
+}
+.inputsTalles{
+    display: flex;
+    gap: 15px;
+    padding: 5px 0px;
+}
+.cartel{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0px;
+}
+.cartel > h3 {
+    width: 15%;
+    text-align: center;
+}
+.cruz{
+    align-self: center;
+    font-size: 15px;
+}
+.none{
+    display: none;
+}
